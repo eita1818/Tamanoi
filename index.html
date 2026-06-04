@@ -91,52 +91,91 @@
         const searchInput = document.getElementById('searchInput');
         const resultList = document.getElementById('resultList');
 
-        // 秒数に変換する関数
-        // 「時:分:秒」または「分:秒」を秒数に変換する強力な関数
+        // 時間を秒に換算する関数
         function getSeconds(timeStr) {
-            const parts = timeStr.split(':').map(Number); // [時, 分, 秒] または [分, 秒]
+            const parts = timeStr.split(':').map(Number);
             let seconds = 0;
-
-            if (parts.length === 3) {
-                // 時:分:秒 の場合
-                seconds = parts[0] * 3600 + parts[1] * 60 + parts[2];
-            } else if (parts.length === 2) {
-                // 分:秒 の場合
-                seconds = parts[0] * 60 + parts[1];
-            }
+            if (parts.length === 3) seconds = parts[0] * 3600 + parts[1] * 60 + parts[2];
+            else if (parts.length === 2) seconds = parts[0] * 60 + parts[1];
             return seconds;
+        }
+
+        // 安全にカードを作成する関数
+        function createSongCard(song) {
+            const card = document.createElement('div');
+            card.className = 'song-item';
+
+            const title = document.createElement('div');
+            title.className = 'song-title';
+            title.textContent = song.title;
+
+            const date = document.createElement('div');
+            date.className = 'info';
+            date.textContent = `配信日: ${song.date}`;
+
+            const video = document.createElement('div');
+            video.className = 'info';
+            video.textContent = `配信名: ${song.videoTitle}`;
+
+            const time = document.createElement('div');
+            time.className = 'info';
+            time.textContent = `歌唱時間: ${song.time}`;
+
+            const link = document.createElement('a');
+            link.className = 'link-btn';
+            const seconds = getSeconds(song.time);
+            link.href = `${song.url}&t=${seconds}s`;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "▶ YouTubeで聴く";
+
+            card.append(title, date, video, time, link);
+            return card;
+        }
+
+        // ★新機能：ひらがなをカタカナに変換する関数
+        function hiraganaToKatakana(str) {
+            return str.replace(/[\u3041-\u3096]/g, function(match) {
+                const chr = match.charCodeAt(0) + 0x60;
+                return String.fromCharCode(chr);
+            });
         }
 
         // 検索と表示の処理
         function displaySongs(filter = "") {
             resultList.innerHTML = "";
-            const filtered = songData.filter(item =>
-                item.title.toLowerCase().includes(filter.toLowerCase()) ||
-                item.videoTitle.toLowerCase().includes(filter.toLowerCase())
-            );
+            if (typeof songData === 'undefined') return;
+
+            // 入力された文字を「小文字」かつ「カタカナ」に統一する
+            const searchWord = hiraganaToKatakana(filter.toLowerCase());
+
+            const filtered = songData.filter(item => {
+                // 対象のテキストもすべて「カタカナ」に変換して比較する
+                const titleKana = hiraganaToKatakana(item.title.toLowerCase());
+                const videoTitleKana = hiraganaToKatakana(item.videoTitle.toLowerCase());
+                const keywordsKana = item.keywords ? hiraganaToKatakana(item.keywords.toLowerCase()) : "";
+                
+                // カタカナ同士、英小文字同士で比較するので、ひらがな/カタカナの揺れが無視される
+                return titleKana.includes(searchWord) || 
+                    videoTitleKana.includes(searchWord) ||
+                    keywordsKana.includes(searchWord);
+            });
+
+            if (filtered.length === 0) {
+                const noResult = document.createElement('p');
+                noResult.textContent = "該当する曲が見つかりません。";
+                noResult.style.textAlign = "center";
+                noResult.style.color = "#888";
+                resultList.appendChild(noResult);
+                return;
+            }
 
             filtered.forEach(song => {
-                const seconds = getSeconds(song.time);
-                // タイムスタンプ付きURLの作成 (例: &t=123s)
-                const tsUrl = `${song.url}&t=${seconds}s`;
-
-                const div = document.createElement('div');
-                div.className = 'song-item';
-                div.innerHTML = `
-                    <div class="song-title">${song.title}</div>
-                    <div class="info">配信日: ${song.date}</div>
-                    <div class="info">配信名: ${song.videoTitle}</div>
-                    <div class="info">歌唱時間: ${song.time}</div>
-                    <a href="${tsUrl}" target="_blank" class="link-btn">▶ YouTubeで聴く</a>
-                `;
-                resultList.appendChild(div);
+                resultList.appendChild(createSongCard(song));
             });
         }
 
-        // 入力されるたびに検索実行
         searchInput.addEventListener('input', (e) => displaySongs(e.target.value));
-
-        // 初期表示
         displaySongs();
     </script>
 </body>
