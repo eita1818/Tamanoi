@@ -1,6 +1,55 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "RAIN / SEKAI NO OWARI",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "05:35"
+    },
+    {
+        title: "ヒッチコック / ヨルシカ",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "13:18"
+    },
+    {
+        title: "美しい鰭 / スピッツ",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "20:28"
+    },
+    {
+        title: "涙そうそう / 森山良子",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "26:40"
+    },
+    {
+        title: "ロマンチシズム / Mrs. GREEN APPLE",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "34:55"
+    },
+    {
+        title: "115万キロのフィルム / Official髭男dism",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "41:02"
+    },
+    {
+        title: "貴方の恋人になりたい / チョーキューメイ",
+        date: "2026/06/19",
+        videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
+        url: "https://www.youtube.com/live/cQ7bQE6GWoQ?si=YpzJPHjMgO8ZnSU4",
+        time: "57:17"
+    },
+    {
         title: "アポリア / ヨルシカ",
         date: "2026/05/24",
         videoTitle: "【 歌枠 】最近聴いてる曲歌ってくぞ〜！！！！！！！🎤✨【 にじさんじ / 珠乃井ナナ 】",
