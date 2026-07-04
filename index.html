@@ -19,7 +19,8 @@
     }
     </script>
 
-    <style>
+    
+<style>
         body {
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
             max-width: 1200px;
@@ -30,16 +31,48 @@
 
         h1 { text-align: center; color: #333;}
 
+        /* 検索＆コントロールエリアのスタイル */
+        .controls-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
         .search-box {
             width: 100%;
             padding: 15px;
             font-size: 16px;
-            margin-bottom: 30px;
             border: 2px solid #ddd;
             border-radius: 25px;
             box-sizing: border-box;
         }
 
+        .filters {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        select, .btn-toggle {
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-toggle.active {
+            background-color: #ffca28;
+            border-color: #ffb300;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* 楽曲リストのスタイル */
         #resultList {
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -55,16 +88,36 @@
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.2s;
+            position: relative;
         }
+
         .song-item:hover {
             transform: translateY(-5px);
         }
+
+        /* ブックマークボタン（星マーク） */
+        .bookmark-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #ddd;
+            transition: color 0.2s;
+            user-select: none;
+        }
+
+        .bookmark-btn.bookmarked {
+            color: #ffca28; /* お気に入り時の黄色 */
+        }
+
         .song-title {
             font-weight: bold;
             color: #e91e63;
             font-size: 1.1em;
             margin-bottom: 10px;
             line-height: 1.4;
+            padding-right: 30px; /* 星マークと被らないように余白 */
         }
 
         .info {
@@ -95,15 +148,35 @@
 <body>
 
     <h1>珠乃井ナナ 歌枠楽曲検索</h1>
-    <input type="text" id="searchInput" class="search-box" placeholder="曲名や配信タイトルで検索...">
+    
+    <div class="controls-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="曲名や配信タイトルで検索...">
+        
+        <div class="filters">
+            <select id="sortSelect">
+                <option value="newest">新しい順</option>
+                <option value="oldest">古い順</option>
+                <option value="random">ランダム</option>
+            </select>
+            
+            <button id="bookmarkFilterBtn" class="btn-toggle">★ ブックマークのみ表示</button>
+        </div>
+    </div>
 
     <div id="resultList"></div>
 
     <script src="data_2.js"></script>
     <script>
         const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const bookmarkFilterBtn = document.getElementById('bookmarkFilterBtn');
         const resultList = document.getElementById('resultList');
 
+        // ブックマークデータをローカルストレージから取得
+        let bookmarks = JSON.parse(localStorage.getItem('tamanoiBookmarks')) || [];
+        let showOnlyBookmarks = false;
+
+        // 時間文字列（HH:MM:SS）を秒に変換
         function getSeconds(timeStr) {
             const parts = timeStr.split(':').map(Number);
             let seconds = 0;
@@ -112,9 +185,32 @@
             return seconds;
         }
 
+        // 楽曲の一意なIDを生成（URLと時間の組み合わせ）
+        function getSongId(song) {
+            return `${song.url}-${song.time}`;
+        }
+
+        // ブックマークの切り替え処理
+        function toggleBookmark(songId) {
+            if (bookmarks.includes(songId)) {
+                bookmarks = bookmarks.filter(id => id !== songId);
+            } else {
+                bookmarks.push(songId);
+            }
+            localStorage.setItem('tamanoiBookmarks', JSON.stringify(bookmarks));
+            displaySongs(); // 画面を更新
+        }
+
+        // 楽曲カードの生成
         function createSongCard(song) {
             const card = document.createElement('div');
             card.className = 'song-item';
+            const songId = getSongId(song);
+
+            const bookmarkBtn = document.createElement('div');
+            bookmarkBtn.className = `bookmark-btn ${bookmarks.includes(songId) ? 'bookmarked' : ''}`;
+            bookmarkBtn.textContent = '★';
+            bookmarkBtn.onclick = () => toggleBookmark(songId);
 
             const title = document.createElement('div');
             title.className = 'song-title';
@@ -140,10 +236,11 @@
             link.rel = "noopener noreferrer";
             link.textContent = "▶ YouTubeで聴く";
 
-            card.append(title, date, video, time, link);
+            card.append(bookmarkBtn, title, date, video, time, link);
             return card;
         }
 
+        // ひらがなをカタカナに変換（検索用）
         function hiraganaToKatakana(str) {
             return str.replace(/[\u3041-\u3096]/g, function(match) {
                 const chr = match.charCodeAt(0) + 0x60;
@@ -151,27 +248,51 @@
             });
         }
 
-        function displaySongs(filter = "") {
+        // 楽曲の表示（フィルター・ソート機能込み）
+        function displaySongs() {
             resultList.innerHTML = "";
             if (typeof songData === 'undefined') return;
 
+            const filter = searchInput.value;
             const searchWord = hiraganaToKatakana(filter.toLowerCase());
+            const sortMode = sortSelect.value;
 
-            const filtered = songData.filter(item => {
+            // 1. 検索とブックマークで絞り込み
+            let filtered = songData.filter(item => {
                 const titleKana = hiraganaToKatakana(item.title.toLowerCase());
                 const videoTitleKana = hiraganaToKatakana(item.videoTitle.toLowerCase());
                 const keywordsKana = item.keywords ? hiraganaToKatakana(item.keywords.toLowerCase()) : "";
                 
-                return titleKana.includes(searchWord) || 
-                    videoTitleKana.includes(searchWord) ||
-                    keywordsKana.includes(searchWord);
+                const matchesSearch = titleKana.includes(searchWord) || 
+                                      videoTitleKana.includes(searchWord) ||
+                                      keywordsKana.includes(searchWord);
+
+                const songId = getSongId(item);
+                const matchesBookmark = showOnlyBookmarks ? bookmarks.includes(songId) : true;
+
+                return matchesSearch && matchesBookmark;
             });
 
+            // 2. 並び替え（ソート）
+            if (sortMode === 'newest') {
+                filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+            } else if (sortMode === 'oldest') {
+                filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+            } else if (sortMode === 'random') {
+                // Fisher-Yatesアルゴリズムによるランダムシャッフル
+                for (let i = filtered.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+                }
+            }
+
+            // 3. 画面に描画
             if (filtered.length === 0) {
                 const noResult = document.createElement('p');
                 noResult.textContent = "該当する曲が見つかりません。";
                 noResult.style.textAlign = "center";
                 noResult.style.color = "#888";
+                noResult.style.gridColumn = "1 / -1"; // グリッド全体の中央に表示
                 resultList.appendChild(noResult);
                 return;
             }
@@ -181,7 +302,21 @@
             });
         }
 
-        searchInput.addEventListener('input', (e) => displaySongs(e.target.value));
+        // イベントリスナーの登録
+        searchInput.addEventListener('input', displaySongs);
+        sortSelect.addEventListener('change', displaySongs);
+        
+        bookmarkFilterBtn.addEventListener('click', () => {
+            showOnlyBookmarks = !showOnlyBookmarks;
+            if (showOnlyBookmarks) {
+                bookmarkFilterBtn.classList.add('active');
+            } else {
+                bookmarkFilterBtn.classList.remove('active');
+            }
+            displaySongs();
+        });
+
+        // 初回読み込み時の表示
         displaySongs();
     </script>
 </body>
