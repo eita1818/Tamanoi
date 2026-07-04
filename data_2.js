@@ -1,6 +1,76 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "らしさ / Official髭男dism",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "06:07"
+    },
+    {
+        title: "恋風 / 幾田りら",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "13:50"
+    },
+    {
+        title: "プロポーズ / なとり",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "19:44"
+    },
+    {
+        title: "アゲハ蝶 / ポルノグラフィティ",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "24:57"
+    },
+    {
+        title: "シルエット / KANA-BOON",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "32:34"
+    },
+    {
+        title: "怪獣 / サカナクション",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "37:49"
+    },
+    {
+        title: "革命道中 / アイナ・ジ・エンド",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "44:18"
+    },
+    {
+        title: "lulu. / Mrs. GREEN APPLE",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "49:31"
+    },
+    {
+        title: "IRIS OUT / 米津玄師",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "55:56"
+    },
+    {
+        title: "ray / BUMP OF CHICKEN",
+        date: "2026/06/28",
+        videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qLteog9rK_g?si=EKthh-3v0Cgp23TX",
+        time: "01:00:56"
+    },
+    {
         title: "RAIN / SEKAI NO OWARI",
         date: "2026/06/19",
         videoTitle: "デビュー2周年記念！ミニ歌枠させていただきます！🎤🎉【 にじさんじ / 珠乃井ナナ 】",
