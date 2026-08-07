@@ -1,6 +1,545 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "departure! / 小野正利",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:57"
+    },
+    {
+        title: "READY STEADY GO / L'Arc〜en〜Ciel",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "09:15"
+    },
+    {
+        title: "ロマンティックあげるよ / 橋本潮",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "14:37"
+    },
+    {
+        title: "朝ごはんの歌 / 手嶌葵",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "20:41"
+    },
+    {
+        title: "めぐる季節 / 井上あずみ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "25:26"
+    },
+    {
+        title: "SUMMER SONG / YUI",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "32:58"
+    },
+    {
+        title: "おつかれSUMMER / HALCALI",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "40:57"
+    },
+    {
+        title: "夏色 / ゆず",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "50:27"
+    },
+    {
+        title: "青と夏 / Mrs. GREEN APPLE",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "55:22"
+    },
+    {
+        title: "花に亡霊 / ヨルシカ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:01:30"
+    },
+    {
+        title: "閃光 / [Alexandros]",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:07:55"
+    },
+    {
+        title: "変わらないもの / 奥華子",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:14:57"
+    },
+    {
+        title: "No title / Reol",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:22:27"
+    },
+    {
+        title: "深海少女 / ゆうゆ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:28:05"
+    },
+    {
+        title: "高嶺の花子さん / back number",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:33:01"
+    },
+    {
+        title: "僕らまた / SG",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:52:10"
+    },
+    {
+        title: "気分上々↑↑ / mihimaru GT",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "01:59:26"
+    },
+    {
+        title: "フィクション / sumika",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:08:51"
+    },
+    {
+        title: "夜明けと蛍 / N-buna",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:14:23"
+    },
+    {
+        title: "砂の惑星 / 米津玄師",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:21:11"
+    },
+    {
+        title: "ロミオとシンデレラ / doriko feat. 初音ミク",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:26:46"
+    },
+    {
+        title: "ハロ/ハワユ / ナノウ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:33:03"
+    },
+    {
+        title: "少女レイ / みきとP feat. 初音ミク",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:39:06"
+    },
+    {
+        title: "カーテンコール / 優里",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:45:16"
+    },
+    {
+        title: "いつも何度でも / 木村弓",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:50:27"
+    },
+    {
+        title: "Arrietty's Song / セシル・コルベル",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "02:54:14"
+    },
+    {
+        title: "晩餐歌 / tuki.",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:02:02"
+    },
+    {
+        title: "花火 / aiko",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:08:39"
+    },
+    {
+        title: "キミがいれば / 伊織",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:14:56"
+    },
+    {
+        title: "謎 / 小松未歩",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:18:11"
+    },
+    {
+        title: "アイコトバ / アイナ・ジ・エンド",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:36:05"
+    },
+    {
+        title: "紅蓮の弓矢 / Linked Horizon",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:41:08"
+    },
+    {
+        title: "トリノコシティ / 40mP feat. 初音ミク",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:47:33"
+    },
+    {
+        title: "踊れオーケストラ / YASUHIRO(康寛) feat. IA",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:51:10"
+    },
+    {
+        title: "ひぐらしのなく頃に / 島みやえい子",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "03:56:00"
+    },
+    {
+        title: "悲しみの向こうへ / いとうかなこ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:00:39"
+    },
+    {
+        title: "最上級にかわいいの！ / 超ときめき♡宣伝部",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:11:17"
+    },
+    {
+        title: "ブリキノダンス / 日向電工 feat. 初音ミク",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:18:36"
+    },
+    {
+        title: "人マニア / 原口沙輔",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:22:14"
+    },
+    {
+        title: "ベノム / かいりきベア",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:25:32"
+    },
+    {
+        title: "ド屑 / なきそ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:29:09"
+    },
+    {
+        title: "おかあさんの唄 / アン・サリー",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:32:06"
+    },
+    {
+        title: "オトノケ / Creepy Nuts",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:38:51"
+    },
+    {
+        title: "あぶく / ヨルシカ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:42:14"
+    },
+    {
+        title: "プラネタリウム / 大塚愛",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:46:57"
+    },
+    {
+        title: "乱舞のメロディ / シド",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:53:00"
+    },
+    {
+        title: "マリーゴールド / あいみょん",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "04:59:40"
+    },
+    {
+        title: "StarRingChild / Aimer",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "19:18"
+    },
+    {
+        title: "あんなに一緒だったのに / See-Saw",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "25:21"
+    },
+    {
+        title: "阿吽のビーツ / 羽生まゐご",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "31:42"
+    },
+    {
+        title: "いかないで / 想太",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "35:19"
+    },
+    {
+        title: "ひゅるりらぱっぱ / tuki.",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "40:10"
+    },
+    {
+        title: "プロポーズ / なとり",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "43:51"
+    },
+    {
+        title: "ファンサ / HoneyWorks",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "48:19"
+    },
+    {
+        title: "夜もすがら君想ふ / 西沢さんP",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "53:41"
+    },
+    {
+        title: "スピカ / ロクデナシ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "58:48"
+    },
+    {
+        title: "愛のうた / ストロベリー・フラワー",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:04:38"
+    },
+    {
+        title: "打上花火 / DAOKO×米津玄師",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:11:35"
+    },
+    {
+        title: "トンツカタンタン / クレイジーウォウウォ!!",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:17:57"
+    },
+    {
+        title: "リードコントロール / なるみや",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:23:17"
+    },
+    {
+        title: "月光 / 鬼束ちひろ",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:37:55"
+    },
+    {
+        title: "fake face dance music / 音田 雅則",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:44:39"
+    },
+    {
+        title: "深海のリトルクライ / sasakure.UK feat. 土岐麻子",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:48:19"
+    },
+    {
+        title: "残酷な天使のテーゼ / 高橋洋子",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:53:58"
+    },
+    {
+        title: "1991 / 米津玄師",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "06:59:15"
+    },
+    {
+        title: "Bunny Girl / AKASAKI",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:04:33"
+    },
+    {
+        title: "HOT LIMIT / T.M.Revolution",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:13:04"
+    },
+    {
+        title: "夏祭り / Whiteberry",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:20:41"
+    },
+    {
+        title: "月のワルツ / 諫山実生",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:26:17"
+    },
+    {
+        title: "Arc goes oN",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:39:40"
+    },
+    {
+        title: "上を向いて歩こう / 坂本九",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:48:17"
+    },
+    {
+        title: "ノンフィクション / 平井堅",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "07:54:13"
+    },
+    {
+        title: "回る空うさぎ / Orangestar",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "08:01:14"
+    },
+    {
+        title: "時を刻む唄 / Lia",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "08:06:15"
+    },
+    {
+        title: "Wonderland / milet",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "08:12:50"
+    },
+    {
+        title: "愛言葉Ⅳ / DECO*27 feat. 初音ミク",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "08:18:51"
+    },
+    {
+        title: "最高到達点 / SEKAI NO OWARI",
+        date: "2026/08/05",
+        videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/qEGVYu3mgTc?si=m5B4hhXZg433NZxX",
+        time: "08:27:07"
+    },
+    {
         title: "らしさ / Official髭男dism",
         date: "2026/06/28",
         videoTitle: "【 歌枠 】2026年上半期ヒットソング歌っていくよ～！🎤✨【にじさんじ / 珠乃井ナナ】",
