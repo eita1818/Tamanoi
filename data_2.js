@@ -1,6 +1,62 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "雲と幽霊 / ヨルシカ",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "04:56"
+    },
+    {
+        title: "真夏の夜の匂いがする / あいみょん",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "13:26"
+    },
+    {
+        title: "Mela! / 緑黄色社会",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "19:20"
+    },
+    {
+        title: "あの夏が飽和する / カンザキイオリ",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "26:44"
+    },
+    {
+        title: "海の声 / 桐谷健太",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "36:35"
+    },
+    {
+        title: "感電 / 米津玄師",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "43:36"
+    },
+    {
+        title: "小さきもの / 林明日香",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "50:21"
+    },
+    {
+        title: "ハイドアンド・シーク / 19's Sound Factory",
+        date: "2026/08/17",
+        videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/d94xyv7DBho?si=bB3DFCI3S0RB1_qA",
+        time: "57:07"
+    },
+    {
         title: "departure! / 小野正利",
         date: "2026/08/05",
         videoTitle: "【 歌枠 】デビュー777日記念！77曲耐久歌枠🎤✨【にじさんじ / 珠乃井ナナ】",
