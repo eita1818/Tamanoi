@@ -1,6 +1,83 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "この広い野原いっぱい / 森山良子",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "04:43"
+    },
+    {
+        title: "渚 / スピッツ",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "10:39"
+    },
+    {
+        title: "向日葵 / Ado",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "17:42"
+    },
+    {
+        title: "夏の終わり / 森山直太朗",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "25:18"
+    },
+    {
+        title: "点描の唄 / Mrs. GREEN APPLE",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "33:20"
+    },
+    {
+        title: "カブトムシ / aiko",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "40:53"
+    },
+    {
+        title: "夏の幻 / GARNET CROW",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "50:55"
+    },
+    {
+        title: "ノーチラス / ヨルシカ",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "57:42"
+    },
+    {
+        title: "Fine on The Outside / プリシラ・アーン",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "01:05:25"
+    },
+    {
+        title: "寄り酔い / 和ぬか",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "01:11:32"
+    },
+    {
+        title: "笑顔 / いきものがかり",
+        date: "2026/08/27",
+        videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/XRew3eBmgSM?si=mHmN2aUclPLehRQz",
+        time: "01:17:03"
+    },
+    {
         title: "雲と幽霊 / ヨルシカ",
         date: "2026/08/17",
         videoTitle: "【 歌枠 】夏真っ盛り！歌で暑さを吹き飛ばそ～！🎤✨【にじさんじ / 珠乃井ナナ】",
