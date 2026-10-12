@@ -1,6 +1,160 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "燈 / 崎山蒼志",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "04:48"
+    },
+    {
+        title: "睨めっ娘 / 友成空",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "12:49"
+    },
+    {
+        title: "千本桜 / 黒うさP",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "17:07"
+    },
+    {
+        title: "アイコトバ / アイナ・ジ・エンド",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "23:20"
+    },
+    {
+        title: "ひとりごつ / ハチワレ",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "31:41"
+    },
+    {
+        title: "今日の日はさようなら / 金子詔一",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "34:49"
+    },
+    {
+        title: "蜜月アン・ドゥ・トロワ / DATEKEN",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "42:01"
+    },
+    {
+        title: "月光 / キタニタツヤ・はるまきごはん",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "50:18"
+    },
+    {
+        title: "RE:I AM / Aimer",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "56:25"
+    },
+    {
+        title: "楓 / スピッツ",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "01:04:20"
+    },
+    {
+        title: "甲賀忍法帖 / 陰陽座",
+        date: "2026/09/27",
+        videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/H8_3AIQ2VtM?si=3Ox3Z8JzFfUCIZOq",
+        time: "01:12:07"
+    },
+    {
+        title: "忘れじの言の葉 / 未来古代楽団 feat. 安次嶺希和子",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "06:02"
+    },
+    {
+        title: "明日への手紙 / 手嶌葵",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "14:33"
+    },
+    {
+        title: "あなたの夜が明けるまで / 傘村トータ",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "21:27"
+    },
+    {
+        title: "スピカ / ロクデナシ",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "27:51"
+    },
+    {
+        title: "ナハトムジーク / Mrs. GREEN APPLE",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "32:51"
+    },
+    {
+        title: "1991 / 米津玄師",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "39:31"
+    },
+    {
+        title: "若者のすべて / フジファブリック",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "45:00"
+    },
+    {
+        title: "たばこ / コレサワ",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "52:37"
+    },
+    {
+        title: "僕が死のうと思ったのは / 中島美嘉",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "01:00:43"
+    },
+    {
+        title: "裸の心 / あいみょん",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "01:09:30"
+    },
+    {
+        title: "小さなてのひら / riya",
+        date: "2026/09/17",
+        videoTitle: "【 歌枠 】夜にゆったりと聴きたい曲、歌っていきます。【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/fzX8l0ZIu9k?si=R1sr2nhf7IbwVoCn",
+        time: "01:15:32"
+    },
+    {
         title: "この広い野原いっぱい / 森山良子",
         date: "2026/08/27",
         videoTitle: "【 歌枠 】夏の終わりを感じる曲歌います【にじさんじ / 珠乃井ナナ】",
