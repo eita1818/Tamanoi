@@ -1,6 +1,83 @@
 // 曲のデータベース
 const songData = Object.freeze([
     {
+        title: "Happy Halloween / Junky",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "01:58"
+    },
+    {
+        title: "AIZO / King Gnu",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "09:06"
+    },
+    {
+        title: "転生林檎 / ピノキオピー",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "15:46"
+    },
+    {
+        title: "名前のない怪物 / EGOIST",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "22:20"
+    },
+    {
+        title: "悪魔の子 / ヒグチアイ",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "30:55"
+    },
+    {
+        title: "Mrs.Pumpkinの滑稽な夢 / ハチ",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "38:07"
+    },
+    {
+        title: "Magia / Kalafina",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "45:15"
+    },
+    {
+        title: "命に嫌われている / カンザキイオリ",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "52:39"
+    },
+    {
+        title: "誰か、海を。 / Aimer",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "57:23"
+    },
+    {
+        title: "季節は次々死んでいく / amazarashi",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "01:04:10"
+    },
+    {
+        title: "アンインストール / 石川智晶",
+        date: "2026/10/27",
+        videoTitle: "【 歌枠 】 ハロウィン目前！ダークな楽曲を歌っていくよ～！！🎤🎃 【にじさんじ / 珠乃井ナナ】",
+        url: "https://www.youtube.com/live/Ty0Pgpzllgk?si=f-_zyj-AgVAntcC2",
+        time: "01:11:50"
+    },
+    {
         title: "燈 / 崎山蒼志",
         date: "2026/09/27",
         videoTitle: "【 歌枠 】秋と月を感じる楽曲歌っていくよ～！🎤🌙【にじさんじ / 珠乃井ナナ】",
